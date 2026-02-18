@@ -281,3 +281,54 @@ footer {
     margin: 0 auto;
   }
 }
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 1000;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.15);
+}
+
+body.dark {
+  background: #0f1115;
+  color: #e6e6eb;
+}
+
+body.dark header {
+  background: rgba(15,17,21,0.8);
+}
+
+body.dark section {
+  background: transparent;
+}
+
+body.dark .card,
+body.dark .thumb {
+  background: #161a22;
+  border-color: #232837;
+}
+
+body.dark a {
+  color: #8ab4ff;
+}
+
+body.dark input,
+body.dark textarea {
+  background: #161a22;
+  color: white;
+  border-color: #232837;
+}
+
+body.dark .lightbox {
+  background: rgba(0,0,0,0.9);
+}
+
