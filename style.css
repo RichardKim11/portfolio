@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #111;
+  line-height: 1.6;
+}
+
+header {
+  padding: 4rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.links a {
+  margin: 0 10px;
+  color: #0070f3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 4rem 1rem;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.grid span {
+  background: #f6f6f6;
+  padding: 0.7rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #0070f3;
+  text-decoration: none;
+}
+
+/* Uniform gallery thumbnails */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .thumb {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    cursor: pointer;
+    background: #f4f4f4;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+  
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+  
+  .thumb:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+  }
+  
+  .thumb:hover img {
+    transform: scale(1.05);
+  }
+  
+  
+  .gallery img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+  }
+  
+  .gallery img:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+  }
+
+.placeholder {
+  background: #f6f6f6;
+  height: 140px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+}
+
+input, textarea, button {
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #eee;
+  color: #777;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.7s ease;
+  }
+  
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+  
+  button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+  
+  .links a {
+    position: relative;
+  }
+  
+  .links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: #0070f3;
+    transition: width 0.25s ease;
+  }
+  
+  .links a:hover::after {
+    width: 100%;
+  }
+  
+  /* Lightbox Modal */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .lightbox img {
+    max-width: 92%;
+    max-height: 92%;
+    border-radius: 14px;
+    box-shadow: 0 25px 80px rgba(0,0,0,0.5);
+    animation: zoomIn 0.35s ease;
+  }
+  
+  .lightbox .close {
+    position: absolute;
+    top: 24px;
+    right: 30px;
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+  }
+  
+  .lightbox .close:hover {
+    opacity: 1;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+  }
+  
+  @keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0 }
+    to { transform: scale(1); opacity: 1 }
+  }
