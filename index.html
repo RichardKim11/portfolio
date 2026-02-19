@@ -10,7 +10,7 @@
 
 <header>
   <button id="theme-toggle" aria-label="Toggle Dark Mode">
-  Dark Mode
+  🌙
 </button>
 
   <h1>Richard Kim</h1>
@@ -19,7 +19,6 @@
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
     <a href="https://www.linkedin.com/in/richard-kim-3859903b1/" target="_blank">LinkedIn</a>
   </div>
 </header>
@@ -107,23 +106,16 @@
 </section>
 
 <section id="gallery">
-    <h2>Gallery</h2>
-  
-    <div class="gallery">
-      <div class="thumb">
-        <img src="images/finet-1.png" alt="Wells Fargo Advisors FiNet Platform" />
-      </div>
-      <div class="thumb">
-        <img src="images/finet-2.png" alt="FiNet Transition Planning UI" />
-      </div>
-      <div class="thumb">
-        <img src="images/wfa-1.png" alt="Wells Fargo Private Wealth Platform" />
-      </div>
-      <div class="thumb">
-        <img src="images/wfa-2.png" alt="Wells Fargo Advisors Homepage" />
-      </div>
-    </div>
-  </section>
+  <h2>Gallery</h2>
+
+  <div class="gallery-grid">
+    <img src="images/finet-1.png" class="thumb" alt="Project 1">
+    <img src="images/finet-2.png" class="thumb" alt="Project 2">
+    <img src="images/wfa-1.png" class="thumb" alt="Project 3">
+    <img src="images/wfa-2.png" class="thumb" alt="Project 4">
+  </div>
+</section>
+
 
 <footer>
   <p>© 2026 Richard Kim • Built with GitHub Pages</p>
@@ -131,7 +123,7 @@
 
 <!-- Lightbox Modal -->
 <div id="lightbox" class="lightbox hidden">
-  <span class="close">&times;</span>
+  <span id="close">&times;</span>
   <img id="lightbox-img" src="" alt="Preview" />
 </div>
 
