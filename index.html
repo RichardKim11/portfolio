@@ -1,136 +1,185 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Richard Kim | Front-End Developer</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richard Kim | Front-End Developer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
 
-<header>
-  <button id="theme-toggle" aria-label="Toggle Dark Mode">
-  🌙
-</button>
+      <h1>Richard Kim</h1>
+      <p>Senior Front-End Web Developer</p>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a
+          href="https://www.linkedin.com/in/richard-kim-3859903b1/"
+          target="_blank"
+          >LinkedIn</a
+        >
+      </div>
+    </header>
 
-  <h1>Richard Kim</h1>
-  <p>Senior Front-End Web Developer</p>
-  <div class="links">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#gallery">Gallery</a>
-    <a href="https://www.linkedin.com/in/richard-kim-3859903b1/" target="_blank">LinkedIn</a>
-  </div>
-</header>
+    <section id="about" class="about">
+      <div class="about-container">
+        <div class="about-photo">
+          <img src="images/portrait.jpg" alt="Richard Kim" />
+        </div>
 
-<section id="about" class="about">
-  <div class="about-container">
-    
-    <div class="about-photo">
-      <img src="images/portrait.jpg" alt="Richard Kim">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            Hello! My name is Richard Kim and I’m a Front-End developer from
+            Fort Mill, SC. I specialize in building clean, modern, and
+            high-performance user interfaces.<br /><br />
+            I enjoy crafting responsive, accessible websites with a focus on
+            performance, usability, and elegant design utilizing various web
+            languages and frameworks.
+          </p>
+          <br />
+          <p>
+            Outside of work, you’ll usually find me trying new recipes, lifting
+            heavy at the gym, or planning my next trip.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skill sets</h2>
+      <div class="grid">
+        <span>JavaScript (ES6+)</span>
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>React</span>
+        <span>Next.js</span>
+        <span>TypeScript</span>
+        <span>jQuery</span>
+        <span>PHP</span>
+        <span>WordPress</span>
+        <span>WooCommerce</span>
+        <span>Shopify</span>
+        <span>Git</span>
+        <span>Accessibility (WCAG)</span>
+        <span>SEO</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+
+      <div class="card">
+        <h3>Wells Fargo Advisors Script Modernization</h3>
+        <p>
+          Enterprise-scale front-end modernization project, refactoring
+          monolithic JavaScript into modular architecture to significantly
+          improve performance, maintainability, and accessibility.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Wells Fargo Financial Network</h3>
+        <p>
+          Responsible for redesigning the site giving it a refreshed modern
+          appearance.
+        </p>
+        <a href="https://www.wfafinet.com/" target="_blank"> Visit Site → </a>
+      </div>
+
+      <div class="card">
+        <h3>Wells Fargo Private Wealth</h3>
+        <p>
+          Led front-end implementation for a high-traffic enterprise financial
+          platform.
+        </p>
+        <a
+          href="https://www.wellsfargoadvisors.com/private-wealth/index.htm"
+          target="_blank"
+        >
+          Visit Site →
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>Tisun Inc. E-Commerce</h3>
+        <p>
+          Built and optimized a WordPress + WooCommerce e-commerce platform with
+          SEO integration.
+        </p>
+        <a href="http://tisunbeauty.com" target="_blank">Visit Site →</a>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Project Gallery</h2>
+
+      <div class="gallery-grid">
+        <img src="images/finet-1.png" class="thumb" alt="Project 1" />
+        <img src="images/finet-2.png" class="thumb" alt="Project 2" />
+        <img src="images/wfa-1.png" class="thumb" alt="Project 3" />
+        <img src="images/wfa-2.png" class="thumb" alt="Project 4" />
+        <img src="images/wfa-3.png" class="thumb" alt="Project 5" />
+        <img src="images/gt-1.jpg" class="thumb" alt="Project 6" />
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p class="contact-sub">
+          Have a project in mind or just want to connect? Lets get in touch!
+        </p>
+
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/xlgwzovg"
+          method="POST"
+          class="contact-form"
+        >
+          <div class="form-grid">
+            <input type="text" name="name" placeholder="Your Name" required />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+          ></textarea>
+
+          <button type="submit" class="btn">
+            <span class="btn-text">Send Message</span>
+
+            <span class="loader"></span>
+          </button>
+
+          <p class="form-status"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Richard Kim • Built with GitHub Pages</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox hidden">
+      <span id="close">&times;</span>
+      <img id="lightbox-img" src="" alt="Preview" />
     </div>
 
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-        Hello! My name is Richard Kim and I’m a Front-End developer from Fort Mill, SC. I specialize in building clean, modern, and high-performance user interfaces.<br/><br/>
-        I enjoy crafting responsive, accessible websites with a focus on performance, usability, and elegant design utilizing various web languages and frameworks.
-      </p>
-      <br/>
-      <p>
-        Outside of work, you’ll usually find me trying new recipes, lifting heavy at the gym, or planning my next trip.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section id="skills">
-  <h2>Skill sets</h2>
-  <div class="grid">
-    <span>JavaScript (ES6+)</span>
-    <span>HTML5</span>
-    <span>CSS3</span>
-    <span>React</span>
-    <span>Next.js</span>
-    <span>TypeScript</span>
-    <span>jQuery</span>
-    <span>PHP</span>
-    <span>WordPress</span>
-    <span>WooCommerce</span>
-    <span>Shopify</span>
-    <span>Git</span>
-    <span>Accessibility (WCAG)</span>
-    <span>SEO</span>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>Featured Projects</h2>
-
-  <div class="card">
-    <h3>Wells Fargo Advisors Script Modernization</h3>
-    <p>
-      Enterprise-scale front-end modernization project, refactoring monolithic
-      JavaScript into modular architecture to significantly improve performance,
-      maintainability, and accessibility.
-    </p>
-  </div>
-
-    <div class="card">
-    <h3>Wells Fargo Financial Network</h3>
-    <p>
-      Responsible for redesigning the site giving it a refreshed modern appearance.
-    </p>
-    <a href="https://www.wfafinet.com/" target="_blank">
-      Visit Site →
-    </a>
-  </div>
-
-  <div class="card">
-    <h3>Wells Fargo Private Wealth</h3>
-    <p>
-      Led front-end implementation for a high-traffic enterprise financial platform.
-    </p>
-    <a href="https://www.wellsfargoadvisors.com/private-wealth/index.htm" target="_blank">
-      Visit Site →
-    </a>
-  </div>
-
-  <div class="card">
-    <h3>Tisun Inc. E-Commerce</h3>
-    <p>
-      Built and optimized a WordPress + WooCommerce e-commerce platform with SEO integration.
-    </p>
-    <a href="http://tisunbeauty.com" target="_blank">Visit Site →</a>
-  </div>
-
-</section>
-
-<section id="gallery">
-  <h2>Project Gallery</h2>
-
-  <div class="gallery-grid">
-    <img src="images/finet-1.png" class="thumb" alt="Project 1">
-    <img src="images/finet-2.png" class="thumb" alt="Project 2">
-    <img src="images/wfa-1.png" class="thumb" alt="Project 3">
-    <img src="images/wfa-2.png" class="thumb" alt="Project 4">
-    <img src="images/wfa-3.png" class="thumb" alt="Project 5">
-    <img src="images/gt-1.jpg" class="thumb" alt="Project 6">
-  </div>
-</section>
-
-
-<footer>
-  <p>© 2026 Richard Kim • Built with GitHub Pages</p>
-</footer>
-
-<!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox hidden">
-  <span id="close">&times;</span>
-  <img id="lightbox-img" src="" alt="Preview" />
-</div>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

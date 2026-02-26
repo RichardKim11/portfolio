@@ -9,6 +9,10 @@
     sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #ffffff;
   color: #111;
@@ -256,6 +260,178 @@ footer {
     max-width: 200px;
     margin: 0 auto;
   }
+}
+/* ---------------- CONTACT ---------------- */
+.contact {
+  padding: 6rem 2rem;
+  background: #0e1117;
+  color: white;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.contact-sub {
+  text-align: center;
+  color: #9aa4b2;
+  margin-bottom: 3rem;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin: auto;
+  background: #161b22;
+  padding: 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  color: white;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #7abcff;
+  box-shadow: 0 0 0 2px rgba(122, 188, 255, 0.15);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  margin-top: 1rem;
+}
+
+.contact-form button {
+  margin-top: 1.5rem;
+  width: 100%;
+  font-size: 1.05rem;
+  padding: 0.9rem;
+  border-radius: 10px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Form Animations ---------- */
+
+.form-status {
+  margin-top: 1rem;
+
+  text-align: center;
+
+  font-weight: 500;
+
+  opacity: 0;
+
+  transform: translateY(10px);
+
+  transition: all 0.3s ease;
+}
+
+.form-status.success {
+  color: #3fb950;
+
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.form-status.error {
+  color: #ff6b6b;
+
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* Button Loader */
+
+.contact-form button {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.loader {
+  width: 22px;
+
+  height: 22px;
+
+  border: 3px solid transparent;
+
+  border-top: 3px solid white;
+
+  border-radius: 50%;
+
+  position: absolute;
+
+  inset: 0;
+
+  margin: auto;
+
+  opacity: 0;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loading State */
+
+button.loading .btn-text {
+  opacity: 0;
+}
+
+button.loading .loader {
+  opacity: 1;
+}
+
+/* Success Bounce */
+
+@keyframes pop {
+  0% {
+    transform: scale(0.95);
+  }
+
+  60% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.form-status.success {
+  animation: pop 0.4s ease;
 }
 
 /* ---------------- THEME TOGGLE ---------------- */
