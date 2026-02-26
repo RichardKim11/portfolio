@@ -55,12 +55,21 @@ h2 {
 }
 
 .grid span {
-  background: #f6f6f6;
-  padding: 0.7rem;
-  border-radius: 6px;
-  text-align: center;
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 19px;
+  background: #f2f4f8;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
+.grid span:hover {
+  transform: scale(1.08);
+  background-color: var(--darkreader-text-8ab4ff, #7abcff);
+}
 .card {
   border: 1px solid #eee;
   border-radius: 10px;
