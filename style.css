@@ -82,21 +82,36 @@ h2 {
   gap: 1rem;
 }
 
+/* ---------- SKILL TAGS ---------- */
+
 .grid span {
   display: inline-block;
   padding: 0.6rem 1rem;
   border-radius: 19px;
-  background: #f2f4f8;
   font-size: 0.9rem;
   font-weight: 500;
   transition:
     transform 0.2s ease,
-    background-color 0.2s ease;
+    background-color 0.25s ease,
+    color 0.25s ease;
 }
 
+/* Light Mode */
+body:not(.dark) .grid span {
+  background: #f2f4f8;
+  color: #1a1a1a;
+}
+
+/* Dark Mode */
+body.dark .grid span {
+  background: #1b2230;
+  color: #c9d6ff;
+  border: 1px solid #2a3447;
+}
+
+/* Hover */
 .grid span:hover {
   transform: scale(1.08);
-  background-color: var(--darkreader-text-8ab4ff, #7abcff);
 }
 
 /* ---------------- CARDS ---------------- */
@@ -261,11 +276,25 @@ footer {
     margin: 0 auto;
   }
 }
-/* ---------------- CONTACT ---------------- */
+/* ---------- CONTACT SECTION ---------- */
+
 .contact {
   padding: 6rem 2rem;
-  background: #0e1117;
-  color: white;
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease;
+}
+
+/* Light Mode */
+body:not(.dark) .contact {
+  background: linear-gradient(180deg, #f6f8fc, #ffffff);
+  color: #111;
+}
+
+/* Dark Mode */
+body.dark .contact {
+  background: linear-gradient(180deg, #0b0e14, #0f1115);
+  color: #e6e6eb;
 }
 
 .contact h2 {
@@ -276,17 +305,32 @@ footer {
 
 .contact-sub {
   text-align: center;
-  color: #9aa4b2;
   margin-bottom: 3rem;
 }
 
 .contact-form {
   max-width: 700px;
   margin: auto;
-  background: #161b22;
   padding: 2.5rem;
   border-radius: 18px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  transition:
+    background-color 0.35s ease,
+    box-shadow 0.35s ease,
+    border 0.35s ease;
+}
+
+/* Light */
+body:not(.dark) .contact-form {
+  background: #ffffff;
+  border: 1px solid #e6e9f0;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Dark */
+body.dark .contact-form {
+  background: #161a22;
+  border: 1px solid #232837;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
 .form-grid {
@@ -298,15 +342,30 @@ footer {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  background: #0d1117;
-  border: 1px solid #30363d;
-  color: white;
   padding: 0.9rem 1rem;
   border-radius: 10px;
   font-size: 1rem;
   transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* Light */
+body:not(.dark) .contact-form input,
+body:not(.dark) .contact-form textarea {
+  background: #f8fafc;
+  border: 1px solid #dce2ee;
+  color: #111;
+}
+
+/* Dark */
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  color: white;
 }
 
 .contact-form input:focus,

@@ -32,9 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  if (localStorage.getItem("theme") === "dark") {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (!savedTheme || savedTheme === "dark") {
     document.body.classList.add("dark");
     toggleBtn.textContent = "☀️";
+    localStorage.setItem("theme", "dark");
   }
 
   const lightbox = document.getElementById("lightbox");
@@ -60,9 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const form = document.getElementById("contact-form");
-
 const status = document.querySelector(".form-status");
-
 const button = form.querySelector("button");
 
 form.addEventListener("submit", async (e) => {
